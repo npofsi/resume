@@ -1,8 +1,8 @@
 // 字体
 #let font = (
-  main: "IBM Plex Serif",
-  mono: "IBM Plex Mono",
-  cjk: "Noto Serif CJK SC",
+  main: "Source Han Serif",
+  mono: "Jetbrains Mono",
+  cjk: "Source Han Serif",
 )
 
 // 图标
@@ -40,10 +40,10 @@
   ))
   
   // 基础字体设定
-  set text(font: (font.main, font.cjk), size: size, lang: "zh")
+  set text(font: (font.main, font.cjk), size: size, lang: "zh", weight: "medium")
 
   // 标题及小标题样式
-  show heading: set text(themeColor, 1.1em)
+  show heading: set text(font: (font.main, font.cjk), themeColor, 1.1em)
 
   // 二级标题下加一条横线
   show heading.where(level: 2): it => stack(
@@ -55,19 +55,19 @@
   )
   
   // 更改 bullet list 的图标
-  // set list(indent: 1em, body-indent: 0.8em, marker: faAngleRight)
+  set list(indent: 0.5em, body-indent: 0.5em)
   // 上面的语句无法精确控制图标位置, 因此改用了下列方法重写 list
-  show list: it => stack(spacing: 0.4em, ..it.children.map(item => {
-    grid(
-      columns: (2em, 1fr),
-      gutter: (0em),
-      box({
-        h(0.75em)
-        faAngleRight
-      }),
-      pad(top: 0.15em, item.body)
-    )
-  }))
+  // show list: it => stack(spacing: 0.6em, ..it.children.map(item => {
+  //   grid(
+  //     columns: (2em, 1fr),
+  //     gutter: (0em),
+  //     box({
+  //       h(0.75em)
+  //       faAngleRight
+  //     }),
+  //     pad(top: 0.05em, item.body)
+  //   )
+  // }))
   
   // 链接颜色
   show link: set text(fill: themeColor)
@@ -94,13 +94,14 @@
       }
     )
   }
-  
+
   body
 }
 
+#let pre(body) = text(body, font: (font.mono))
 
 // 带竖线的侧边栏
-#let sidebar(side, content, withLine: true, sideWidth: 12%) = layout(size => {
+#let sidebar(side, content, withLine: true, sideWidth: 12%, margin : 0.25em) = layout(size => {
   let sideSize = measure(width: size.width,height: size.height,side)
   let contentSize = measure(width: size.width * (100% - sideWidth),height: size.height,content)
   let height = calc.max(sideSize.height, contentSize.height) + 0.5em
@@ -109,15 +110,15 @@
     gutter: (0.75em),
     {
       set align(right)
-      v(0.25em)
+      v(margin)
       side
-      v(0.25em)
+      v(margin)
     },
     if (withLine) {line(end: (0em, height), stroke: 0.05em)},
     {
-      v(0.25em)
+      v(margin)
       content
-      v(0.25em)
+      v(margin)
     },
   )
 })
@@ -146,7 +147,7 @@
         }
       })
     }).join(h(0.5em) + "·" + h(0.5em))
-    v(0.5em)
+    v(0.0em)
 }
 
 
@@ -160,7 +161,7 @@
 
 // 技术: 字体变细
 #let tech(body) = block({
-  set text(weight: "extralight")
+  set text(weight: "light")
   body
 })
 
@@ -172,8 +173,9 @@
 ) = {
   v(0.25em)
   grid(
-    columns: (30%, 1fr, auto),
+    columns: (35%, 1fr, auto),
     gutter: (0em),
     title, desc, endnote
   )
 }
+
