@@ -32,7 +32,7 @@
   body
 ) = {
   // 页边距设定
-  set page(paper: "a4", numbering: "1", margin: (
+  set page(paper: "a4", numbering: none, margin: (
     top: top,
     bottom: bottom,
     left: left,
@@ -47,15 +47,17 @@
 
   // 二级标题下加一条横线
   show heading.where(level: 2): it => stack(
-    v(0.3em),
+    v(0.1em),
     it,
     v(0.6em),
     line(length: 100%, stroke: 0.05em + themeColor),
     v(0.1em),
   )
   
+
+
   // 更改 bullet list 的图标
-  set list(indent: 0.5em, body-indent: 0.5em)
+  set list(indent: 0.5em, body-indent: 0.5em, spacing: 1.0em, tight: true)
   // 上面的语句无法精确控制图标位置, 因此改用了下列方法重写 list
   // show list: it => stack(spacing: 0.6em, ..it.children.map(item => {
   //   grid(
@@ -99,6 +101,8 @@
 }
 
 #let pre(body) = text(body, font: (font.mono))
+#let forceFont(font, body) = text(body, font: font)
+#let forceWeightSize(body, weight, size) = text(body, weight: weight, size: size)
 
 // 带竖线的侧边栏
 #let sidebar(side, content, withLine: true, sideWidth: 12%, margin : 0.25em) = layout(size => {
@@ -161,7 +165,7 @@
 
 // 技术: 字体变细
 #let tech(body) = block({
-  set text(weight: "light")
+  set text(weight: "regular")
   body
 })
 
@@ -173,9 +177,9 @@
 ) = {
   v(0.25em)
   grid(
-    columns: (35%, 1fr, auto),
+    columns: (42%, 1fr, auto),
     gutter: (0em),
-    title, desc, endnote
+    [#title #h(1fr) #desc],[], endnote
   )
 }
 

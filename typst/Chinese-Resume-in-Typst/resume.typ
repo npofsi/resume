@@ -41,17 +41,17 @@
   // photographWidth: 10em,
   // gutterWidth: 2em,
 )[
-#set strong(delta: 100)
+
 = 赵海波
 
-#v(0.25em)
+#v(0.8em)
 
 #info(
   color: themeColor,
   (
     // 其实 icon 也可以直接填字符串, 如 "fa-phone.svg" 
     icon: faPhone,
-    content: "(+86) 137-3481-1106"
+    content: "(+86) 137-3481-1106",
   ),
   // (
   //   icon: faBuildingColumns,
@@ -67,8 +67,8 @@
   // ),
   (
     icon: faEnvelope,
-    content: "npofsi@foxmail.com",
-    link: "npofsi@foxmail.com"
+    content: "haibozhao@bjtu.edu.cn",
+    link: "haibozhao@bjtu.edu.cn"
   ),
   (
     icon: faGithub,
@@ -79,15 +79,15 @@
 ][
 // #h(2em)  // 手动顶行, 2em 代表两个字的宽度
 
-// 我是赵海波，现在是北京交通大学大学电气工程学院 2024 级在读博士研究生。
-// 喜欢一切新奇的东西，兴趣十分广泛。
+// 我是赵海波，现在是北京交通大学大学电气工程学院 2024 级在读博士研究生
+// 喜欢一切新奇的东西，兴趣十分广泛
 ]
 
 
 == #faGraduationCap 教育背景
 
 #sidebar(withLine: true, sideWidth: 20%)[
-  #h(0.2em) 2021.09 --- 2024.07 #h(1fr)
+  #h(0.2em) 2021.09 \u{2015} 2024.07 #h(1fr)
 ][
   #sidebar(withLine: false, sideWidth: 40%, margin: 0em)[
   *北京交通大学* · 学士学位 #h(1fr)
@@ -102,10 +102,10 @@
 ]
 
 #sidebar(withLine: true, sideWidth: 20%)[
-  #h(0.2em) 2024.09 --- 在读 #h(1fr)
+  #h(0.2em) 2024.09 \u{2015} 至今 #h(1fr)
 ][
   #sidebar(withLine: false, sideWidth: 40%, margin: 0em)[
-  *北京交通大学* · 博士学位 #h(1fr)
+  *北京交通大学* · 博士学位（在读） #h(1fr)
 
   #align(left)[ 电气工程学院 ]
   ][
@@ -119,68 +119,69 @@
 #item(
   link(
     "https://github.com/beyondstorage/go-service-ftp",
-    [ *BeyondStorage / gostorage-ftp* ]
+    [ #forceWeightSize([*BeyondStorage / gostorage-ftp*], "bold", 11pt) ]
   ),
 
-  [ 社区计划 ],
+  [  ],
 
   date[ 2021 年 07 月 – 2022 年 01 月 ]
 )
-2021 开源软件供应链点亮计划 - 中科院南京软件所 & openEuler
-#tech[ Go, FTP(RFC 959), go-codegenutils ]
+2021 开源软件供应链点亮计划
+#tech[ Go, FTP(RFC 959) ]
 
-为 BeyondStorage 下的对象文件系统中间件 go-storage 提供 FTP 协议支持。
+为 BeyondStorage 下的对象文件系统中间件 go-storage 提供 FTP 协议支持
 
 - 撰写软件 RFC，实现 FTP 协议功能，实现对象文件系统的 read、write、list 等基本操作
-- 使用 go-codegenutils 基于 go-storage 中间件模板生成兼容性代码
+- 使用 go-codegenutil 基于 go-storage 中间件模板生成兼容性代码
 - 项目实现了通过 FTP 协议对其他不同的对象文件系统（如 Amazon S3、Google GCS 等）进行操作的功能
 
-
 #item(
-  
   link(
     "",
-    [ *RWPS 数据采集分析软件*]
-    ),
+    [ #forceWeightSize([*基于PINN的耦合非线性薛定谔方程求解*], "bold", 11pt) ]
+  ),
+  [  ],
+  date[ 2022 年 11 月 – 2023 年 06 月 ]
+)
+大学生创新创业大赛
+#tech[ Python, PyTorch, Numpy, Scipy, Pandas, Matplotlib ]
 
-  [ 实验室项目 ],
+使用 Python 机器学习框架 PyTorch, 基于 PINN（物理信息神经网络）对方程进行AI预测求解
 
+- 使用 Scipy、Numpy、Pandas 组织生成部分方程解数据与边界条件，输入网络进行训练
+
+#item(
+  link(
+    "",
+    [ #forceWeightSize([*RWPS 数据采集分析软件*], "bold", 11pt) ]
+  ),
+  [  ],
   date[ 2023 年 05 月 – 2024 年 11 月 ]
 )
 机车避雷器监测装置开发 - 北京交通大学 · 牵引供电实验室
 #tech[ .NET Framework WPF, C\#, SQLite, EntityFramework, GPS/NMEA, 串口开发, 领域驱动开发   ]
 
-RWPS(Railway Power Supervisor)软件及测量装置提供了在机车上对供电信息进行持续采集和监测的能力。
+RWPS(Railway Power Supervisor)软件及测量装置提供了在机车上对供电信息进行持续采集和监测的能力
 
-- 基于串口与下位机交互，获取传感器及GPS数据，使用 pipeline 解决数据密集型软件的优化问题
+- 基于 Modbus 及 NMEA 串口协议与传感器及 GPS 交互获取数据，并解决数据密集型软件的优化问题
 - 基于 .NET Framework 开发界面，包括实时数据展示、录制及回放、特殊事件触发展示等窗口
 - 基于 SQLite 数据库与ORM框架 EntityFramework 开发数据录制、回放及导出功能
-
-// - 实现 FTP 协议功能，实现对象文件系统的read, write, list等基本操作
-// - 使用 go-codegenutils 基于 go-storage 中间件模板生成兼容性代码
-// - 项目实现了通过FTP协议对其他不同的对象文件系统（如 Amazon S3、Google GCS等）进行操作的功能
-
 
 
 // == #faWrench 专业技能
 
-
 == #faAward 获奖情况
 
 #item(
-  [ *大学生创新创业大赛 北京交通大学* ],
-  [ *二等奖* ],
-  date[ 2023 年 秋 ]
+  [ *大学生数学建模竞赛* ],
+  [ *校级 三等奖* ],
+  date[ 2023 年 03 月 ]
 )
 
-- 《基于物理信息神经网络的耦合非线性薛定谔方程的求解》
-
-- 使用 Python 机器学习框架 PyTorch, 基于 PINN 对耦合非线性薛定谔方程进行AI预测求解。
-
 #item(
-  [ *大学生程序设计竞赛 北京交通大学* ],
-  [ *二等奖* ],
-  date[ 2021 年 秋 ]
+  [ *大学生程序设计竞赛* ],
+  [ *校级 二等奖* ],
+  date[ 2022 年 05 月 ]
 )
 
 
@@ -192,23 +193,17 @@ RWPS(Railway Power Supervisor)软件及测量装置提供了在机车上对供�
 == #faWrench 职业技能
 
 #sidebar(withLine: false, sideWidth: 12%)[
-  *操作系统*
+  // *职业技能*
   
   *编程语言*
-  
-  *设计工具*
 
-  *仿真工具*
+  *仿真验证*
 ][
+  // CET-6
+  
+  Kotlin, Python, C\#, Go, C++, JavaScript, SystemVerilog
 
-  Linux, Windows
-  
-  Kotlin, Java, Python, C\#, Go, C++, JavaScript, SystemVerilog
-  
-  VSCode, IntelliJ IDEA, Vivado
-
-  MATLAB & Simulink
-  
+  MATLAB & Simulink, Vivado
 ]
 
 
@@ -246,9 +241,7 @@ RWPS(Railway Power Supervisor)软件及测量装置提供了在机车上对供�
 // - 基于 React 搭建了一个黑白棋平台前端，支持玩家对战、人机对战和 AI 对战
 // - 在后端使用 Flask 及 Socket.io 库，实现了玩家之间的联机对战
 
-
 // == #faBuildingColumns 校园经历
-
 
 // #item(
 //   [ *微软学生俱乐部技术部部长* ],
