@@ -82,9 +82,9 @@
 ][
 // #h(2em)  // 手动顶行, 2em 代表两个字的宽度
 
-毕业于北京交通大学，获得电气工程及其自动化和计算机科学与技术双学位，有较长时间（>5年）的软件开发经验，在Android、.Net Framework、Web平台的开发经验较为丰富。
 
-// 我是赵海波，现在是北京交通大学大学电气工程学院 2024 级在读博士研究生
+
+我是北京交通大学电气工程在读博士研究生，在Web、Android、ReactNative、.Net Framework平台的开发有较多的开发经验。
 // 喜欢一切新奇的东西，兴趣十分广泛
 ]
 
@@ -132,12 +132,12 @@
   date[ 2021 年 07 月 – 2022 年 01 月 ]
 )
 2021 开源软件供应链点亮计划
-#tech[ Go, FTP(RFC 959) ]
+#tech[ Go, FTP(RFC 959), CI/CD(Github Action) ]
 
 为 BeyondStorage 下的对象文件系统中间件 go-storage 提供 FTP 协议支持
 
-- 撰写软件 RFC，实现 FTP 协议功能，实现对象文件系统的 read、write、list 等基本操作
-- 使用 go-codegenutil 基于 go-storage 中间件模板生成兼容性代码
+- 撰写软件 RFC，实现 FTP 功能，实现对象文件系统的多种操作
+- 使用基于 go-storage 中间件模板生成兼容性代码，通过 Github Action 进行构建及测试
 - 项目实现了通过 FTP 协议对其他不同的对象文件系统（如 Amazon S3、Google GCS 等）进行操作的功能
 
 #item(
@@ -158,19 +158,19 @@
 #item(
   link(
     "",
-    [ #forceWeightSize([*RWPS 数据采集分析软件*], "bold", 11pt) ]
+    [ #forceWeightSize([*RWPS 监测数据采集分析软件*], "bold", 11pt) ]
   ),
   [  ],
   date[ 2023 年 05 月 – 2024 年 11 月 ]
 )
 机车避雷器监测装置开发 - 北京交通大学 · 牵引供电实验室
-#tech[ .NET Framework WPF, C\#, SQLite, EntityFramework, GPS/NMEA, 串口开发, 领域驱动开发   ]
+#tech[ MVVM, .NET Framework WPF, C\#, SQLite, EntityFramework, GPS/NMEA, TTL, 领域驱动开发   ]
 
 RWPS(Railway Power Supervisor)软件及测量装置提供了在机车上对供电信息进行持续采集和监测的能力
 
 - 基于 Modbus 及 NMEA 串口协议与传感器及 GPS 交互获取数据，并解决数据密集型软件的优化问题
 - 基于 .NET Framework 开发界面，包括实时数据展示、录制及回放、特殊事件触发展示等窗口
-- 基于 SQLite 数据库与ORM框架 EntityFramework 开发数据录制、回放及导出功能
+- 基于 SQLite 与ORM框架 EntityFramework 开发数据录制、回放及导出功能
 
 
 // == #faWrench 专业技能
@@ -202,13 +202,13 @@ RWPS(Railway Power Supervisor)软件及测量装置提供了在机车上对供�
   
   *编程语言*
 
-  *仿真验证*
+  *其他软件*
 ][
   // CET-6
   
-  Kotlin, Python, C\#, Go, C++, JavaScript, SystemVerilog
+  进阶: Kotlin, Python, C\#, Go; 基础: C++, JavaScript, SystemVerilog
 
-  MATLAB & Simulink, Vivado
+  MATLAB & Simulink, Vivado, Autodesk Inventor
 ]
 
 
