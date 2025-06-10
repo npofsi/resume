@@ -47,7 +47,7 @@
 
 
 
-#v(0.8em)
+#v(0.2em)
 
 #info(
   color: themeColor,
@@ -84,7 +84,7 @@
 
 
 
-我是北京交通大学电气工程在读博士研究生，在Web、Android、ReactNative、.Net Framework平台的开发有较多的开发经验。
+北京交通大学电气工程在读博士研究生，电气 + 计算机学士学位，在Go, Web, Kotlin, .Net平台有丰富的开发经验。
 // 喜欢一切新奇的东西，兴趣十分广泛
 ]
 
@@ -164,7 +164,7 @@
   date[ 2023 年 05 月 – 2024 年 11 月 ]
 )
 机车避雷器监测装置开发 - 北京交通大学 · 牵引供电实验室
-#tech[ MVVM, .NET Framework WPF, C\#, SQLite, EntityFramework, GPS/NMEA, TTL, 领域驱动开发   ]
+#tech[ MVVM, .NET Framework WPF, C\#, SQLite, EntityFramework, GPS/NMEA, TTL, DDD   ]
 
 RWPS(Railway Power Supervisor)软件及测量装置提供了在机车上对供电信息进行持续采集和监测的能力
 
