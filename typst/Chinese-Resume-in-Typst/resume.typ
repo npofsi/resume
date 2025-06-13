@@ -18,7 +18,7 @@
 #let faWork = icon("icons/fa-work.svg")
 
 // 主题颜色
-#let themeColor = rgb(38, 38, 125)
+#let themeColor = rgb("#26267d")
 
 // 设置简历选项与头部
 #show: resume.with(
@@ -42,12 +42,12 @@
   // gutterWidth: 2em,
 )[
 
-= 赵海波
+= 赵海波 Zhao Haibo
 
 
 
 
-#v(0.2em)
+#v(0.15em)
 
 #info(
   color: themeColor,
@@ -83,8 +83,7 @@
 // #h(2em)  // 手动顶行, 2em 代表两个字的宽度
 
 
-
-北京交通大学电气工程在读博士研究生，电气 + 计算机学士学位，在Go, Web, Kotlin, .Net平台有丰富的开发经验。
+北京交通大学电气工程在读博士研究生，电气 + 计算机学士学位，在Go, Kotlin, Web, .Net平台有丰富的开发经验。
 // 喜欢一切新奇的东西，兴趣十分广泛
 ]
 
@@ -124,53 +123,70 @@
 #item(
   link(
     "https://github.com/beyondstorage/go-service-ftp",
-    [ #forceWeightSize([*BeyondStorage / gostorage-ftp*], "bold", 11pt) ]
+    [ #forceWeightSize([*BeyondStorage / gostorage-ftp* ], "bold", 11pt) — 2021 开源软件供应链点亮计划  ]
   ),
 
   [  ],
-
   date[ 2021 年 07 月 – 2022 年 01 月 ]
 )
-2021 开源软件供应链点亮计划
-#tech[ Go, FTP(RFC 959), CI/CD(Github Action) ]
+#tech[ Go, Go Routine, FTP(RFC 959), CI/CD(Github Action)]
 
 为 BeyondStorage 下的对象文件系统中间件 go-storage 提供 FTP 协议支持
 
-- 撰写软件 RFC，实现 FTP 功能，实现对象文件系统的多种操作
-- 使用基于 go-storage 中间件模板生成兼容性代码，通过 Github Action 进行构建及测试
-- 项目实现了通过 FTP 协议对其他不同的对象文件系统（如 Amazon S3、Google GCS 等）进行操作的功能
+- 撰写 RFC，基于中间件生成模板代码, 并基于此实现了通过 FTP 协议对多种对象文件系统的异步操作功能。
 
 #item(
   link(
     "",
-    [ #forceWeightSize([*基于PINN的耦合非线性薛定谔方程求解*], "bold", 11pt) ]
+    [ #forceWeightSize([*基于PINN的耦合非线性薛定谔方程求解*], "bold", 11pt) — 大学生创新创业大赛]
   ),
   [  ],
   date[ 2022 年 11 月 – 2023 年 06 月 ]
 )
-大学生创新创业大赛
+
 #tech[ Python, PyTorch, Numpy, Scipy, Pandas, Matplotlib ]
 
-使用 Python 机器学习框架 PyTorch, 基于 PINN（物理信息神经网络）对方程进行AI预测求解
-
+- 使用 Python 机器学习框架 PyTorch，基于 PINN（物理信息神经网络）设计网络，对方程进行预测求解
 - 使用 Scipy、Numpy、Pandas 组织生成部分方程解数据与边界条件，输入网络进行训练
 
 #item(
   link(
     "",
-    [ #forceWeightSize([*RWPS 监测数据采集分析软件*], "bold", 11pt) ]
+    [ #forceWeightSize([*RWPS 监测数据采集分析软件*], "bold", 11pt) — 北京交通大学 · 牵引供电实验室]
   ),
   [  ],
   date[ 2023 年 05 月 – 2024 年 11 月 ]
 )
-机车避雷器监测装置开发 - 北京交通大学 · 牵引供电实验室
-#tech[ MVVM, .NET Framework WPF, C\#, SQLite, EntityFramework, GPS/NMEA, TTL, DDD   ]
+#tech[ MVVM, .NET, C\#, SQLite, GPS/NMEA, TTL, DDD ]
 
-RWPS(Railway Power Supervisor)软件及测量装置提供了在机车上对供电信息进行持续采集和监测的能力
+RWPS 提供了在机车上对供电信息进行持续采集和监测的能力
 
-- 基于 Modbus 及 NMEA 串口协议与传感器及 GPS 交互获取数据，并解决数据密集型软件的优化问题
-- 基于 .NET Framework 开发界面，包括实时数据展示、录制及回放、特殊事件触发展示等窗口
-- 基于 SQLite 与ORM框架 EntityFramework 开发数据录制、回放及导出功能
+- 基于 TTL/NMEA 串口协议与传感器及 GPS 交互获取数据，并解决数据密集型软件的优化问题
+- 基于 .NET 开发界面，基于 SQLite 开发数据管理功能，实现高密度电气数据的传输、现实及储存
+
+#item(
+  link(
+    "",
+    [ #forceWeightSize([*Android 应用开发*], "bold", 11pt) — Google Play 开发者]
+  ),
+  [  ],
+  date[ 2020 年 01 月 – 至今 ]
+)
+#tech[ Java, Kotlin, ReactNative, Android SDK, MVVM, MIDI ]
+- EuMIDI, 一个可视化 MIDI 播放器，基于WebView, Web MIDI API 实现。
+- Fanbox Viewer, 使用Java/Kotlin融合开发的 Fanbox 快捷浏览器
+
+#item(
+  link(
+    "",
+    [ #forceWeightSize([*DoveCompiler*], "bold", 11pt) — 计算机系统能力大赛 编译器]
+  ),
+  [  ],
+  date[ 2023 年 08 月 – 2024 年 01 月 ]
+)
+基于 ANTLR/C++ 开发编译器前端，实现将 SysY 语言编译到 LLVM IR。
+
+
 
 
 // == #faWrench 专业技能
@@ -206,7 +222,7 @@ RWPS(Railway Power Supervisor)软件及测量装置提供了在机车上对供�
 ][
   // CET-6
   
-  进阶: Kotlin, Python, C\#, Go; 基础: C++, JavaScript, SystemVerilog
+  进阶: Kotlin, Go, Python, C\#; 基础: C++, JavaScript, SystemVerilog
 
   MATLAB & Simulink, Vivado, Autodesk Inventor
 ]

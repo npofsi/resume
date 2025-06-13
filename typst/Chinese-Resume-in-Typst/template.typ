@@ -177,7 +177,7 @@
 ) = {
   v(0.25em)
   grid(
-    columns: (42%, 1fr, auto),
+    columns: (70%, 1fr, auto),
     gutter: (0em),
     [#title #h(1fr) #desc],[], endnote
   )
