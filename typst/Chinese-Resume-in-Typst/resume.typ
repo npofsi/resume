@@ -42,7 +42,7 @@
   // gutterWidth: 2em,
 )[
 
-= 赵海波 Zhao Haibo
+= 赵海波
 
 
 
