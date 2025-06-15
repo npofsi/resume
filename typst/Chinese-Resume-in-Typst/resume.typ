@@ -84,7 +84,7 @@
 
 
 北京交通大学电气工程在读博士研究生，电气 + 计算机学士学位，在Go, Kotlin, Web, .Net平台有丰富的开发经验。
-// 喜欢一切新奇的东西，兴趣十分广泛
+// 我是北京交通大学电气工程在读博士研究生，在Web端、移动端、Golang平台的开发有较多的开发经验，在实验室内主要使用.Net、Python辅助数据采集及分析工作。
 ]
 
 
@@ -94,13 +94,13 @@
   #h(0.2em) 2021.09 \u{2015} 2024.07 #h(1fr)
 ][
   #sidebar(withLine: false, sideWidth: 40%, margin: 0em)[
-  *北京交通大学* · 学士学位 #h(1fr)
+  *北京交通大学* · 本科（双学位） #h(1fr)
 
   #align(left)[ 詹天佑学院 ]
   ][
-  #h(1fr) 电气工程及其自动化专业
+  #h(1fr) 电气工程及其自动化
 
-  #h(1fr) 计算机科学与技术专业（双学位）
+  #h(1fr) 计算机科学与技术
   ]
   // GPA: 4.48 / 5 · Rank: 15%
 ]
@@ -109,7 +109,7 @@
   #h(0.2em) 2024.09 \u{2015} 至今 #h(1fr)
 ][
   #sidebar(withLine: false, sideWidth: 40%, margin: 0em)[
-  *北京交通大学* · 博士学位（在读） #h(1fr)
+  *北京交通大学* · 博士研究生（在读） #h(1fr)
 
   #align(left)[ 电气工程学院 ]
   ][
@@ -213,12 +213,11 @@ RWPS 提供了在机车上对供电信息进行持续采集和监测的能力
 
 == #faWrench 职业技能
 
-#sidebar(withLine: false, sideWidth: 12%)[
+#sidebar(withLine: false, sideWidth: 9%)[
   // *职业技能*
-  
-  *编程语言*
+#h(0.2em) *编程语言* #h(1fr)
 
-  *其他软件*
+#h(0.2em) *其他软件* #h(1fr)
 ][
   // CET-6
   

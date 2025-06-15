@@ -150,7 +150,7 @@
           dir.content
         }
       })
-    }).join(h(0.5em) + "·" + h(0.5em))
+    }).join(h(0.5fr) + "·" + h(0.5fr))
     v(0.0em)
 }
 
@@ -177,7 +177,7 @@
 ) = {
   v(0.25em)
   grid(
-    columns: (70%, 1fr, auto),
+    columns: (75%, 1fr, auto),
     gutter: (0em),
     [#title #h(1fr) #desc],[], endnote
   )
